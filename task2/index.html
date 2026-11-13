@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課題2 Markdownプレビュー</title>
+  <style>
+    body {
+      width: min(860px, calc(100% - 32px));
+      margin: auto;
+      background: #f0fdff;
+      color: #334155;
+      font-family: "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
+      line-height: 1.8;
+    }
+
+    header,
+    section,
+    footer {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid #bae6fd;
+      background: #ffffff;
+    }
+
+    h1 {
+      color: maroon;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0f766e;
+      border-bottom: 2px solid #99f6e4;
+      padding-bottom: 4px;
+    }
+
+    a {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .video {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #0f172a;
+    }
+
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p><a href="../index.html">課題一覧へ戻る</a> / <a href="../docs/index.md">Markdown原稿を見る</a></p>
+    <h1>課題2：Markdownで書いたページ</h1>
+    <p>
+      このページは、ローカル確認用にMarkdownページの内容をHTMLでプレビューしたものです。
+      GitHub Pages上では、<code>docs/index.md</code> をMarkdownページとして公開できます。
+    </p>
+  </header>
+
+  <section>
+    <h2>Emphasis</h2>
+    <p><strong>Markdownでは太字を簡単に書けます。</strong></p>
+    <p><em>斜体も使うことができます。</em></p>
+    <p><s>取り消し線も表現できます。</s></p>
+  </section>
+
+  <section>
+    <h2>Blockquotes</h2>
+    <blockquote>
+      Webページは、HTMLだけでなくMarkdownのような軽量な記法でも作成できます。
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Lists</h2>
+    <ul>
+      <li>見出しを書く</li>
+      <li>本文を書く</li>
+      <li>画像を入れる</li>
+      <li>YouTube動画を入れる</li>
+      <li>外部リンクを入れる</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tables</h2>
+    <table>
+      <tr><th>項目</th><th>内容</th></tr>
+      <tr><td>ファイル</td><td><code>docs/index.md</code></td></tr>
+      <tr><td>記法</td><td>Markdown</td></tr>
+      <tr><td>追加要素</td><td>画像、動画、リンク、CSS</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Images</h2>
+    <img src="assets/gibomusu.jpg" alt="義母と娘のブルースの紹介画像">
+  </section>
+
+  <section>
+    <h2>Youtube Video</h2>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/IX87le_EokM" title="義母と娘のブルース 主題歌" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="https://www.tbs.co.jp/gibomusu_blues/" target="_blank" rel="noopener noreferrer">TBS公式サイト</a></p>
+  </footer>
+</body>
+</html>
