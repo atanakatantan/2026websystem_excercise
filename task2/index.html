@@ -6,10 +6,9 @@
   <title>課題2 Markdownプレビュー</title>
   <style>
     body {
+      background: lightcyan;
       width: 800px;
       margin: auto;
-      background: lightcyan;
-      font-family: "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
     }
 
     h1 {
@@ -22,40 +21,107 @@
       border: 1px solid gray;
       padding: 10px;
     }
-
-    img {
-      display: block;
-      width: 500px;
-      height: auto;
-      margin: 20px auto;
-    }
-
-    iframe {
-      display: block;
-      margin: 20px auto;
-    }
   </style>
 </head>
 <body>
-  <h1>マークダウンで書いたページ</h1>
-  <p><a href="../index.html">課題一覧へ戻る</a> / <a href="../docs/index.md">Markdown原稿を見る</a></p>
+  <h2>Images</h2>
+  <p><img src="assets/gibomusu.jpg" alt="義母と娘のブルースの紹介画像" width="500"></p>
 
-  <p>人生は、生きてるだけで丸儲け、争わない、楽しみ、チャレンジする。それで、人の役に立てれば最高！</p>
+  <h1>Youtube Video</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/IX87le_EokM" title="義母と娘のブルース 主題歌" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <h1>マークダウンで書いたページ</h1>
+  <p>人生は、生きてるだけで丸儲け、争わない、楽しみ、チャレンジするそれで、人の役に立てれば最高!</p>
 
   <h2>中野信子氏「生きてるだけで丸儲け」は生物学的にも正しい</h2>
-
   <p>脳科学を通して伝えたいことはシンプルで「生きている者が勝ち！」ということです。</p>
-
   <p>ほとんどの生物の目的というのは「生き延びること」と「子孫を残すこと」なんですね。</p>
-
   <p>ですが人間だけはそうではない。「ひと花咲かせよう！」みたいなのがあって、これがすごい特異的なんですよ。本当は生き延びて生殖するために脳ができたんですけど、でもその脳が発達しすぎてしまったがために「ひと花咲かせよう！」ができちゃうわけです。</p>
 
-  <h2>Images</h2>
+  <h1>h1 Heading</h1>
+  <h2>h2 Heading</h2>
+  <h3>h3 Heading</h3>
+  <h4>h4 Heading</h4>
+  <h5>h5 Heading</h5>
+  <h6>h6 Heading</h6>
 
-  <img src="assets/gibomusu.jpg" alt="義母と娘のブルースの紹介画像">
+  <h2>Emphasis</h2>
+  <p><strong>This is bold text</strong></p>
+  <p><em>This is italic text</em></p>
+  <p><del>Strikethrough</del></p>
 
-  <h2>Youtube Video</h2>
+  <h2>Blockquotes</h2>
+  <blockquote>
+    <p>Blockquotes can also be nested...</p>
+    <blockquote>
+      <p>...by using additional greater-than signs right next to each other...</p>
+      <blockquote>
+        <p>...or with spaces between arrows.</p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/IX87le_EokM" title="義母と娘のブルース 主題歌" allowfullscreen></iframe>
+  <h2>Lists</h2>
+  <p>Unordered</p>
+  <ul>
+    <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+    <li>Sub-lists are made by indenting 2 spaces:
+      <ul>
+        <li>Marker character change forces new list start:
+          <ul>
+            <li>Ac tristique libero volutpat at</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Very easy!</li>
+  </ul>
+
+  <p>Ordered</p>
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+  </ol>
+
+  <h2>Code</h2>
+  <p>Inline <code>code</code></p>
+  <pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code</code></pre>
+
+  <pre><code>Sample text here...</code></pre>
+
+  <pre><code>var foo = function (bar) {
+  return bar++;
+};
+console.log(foo(5));</code></pre>
+
+  <h2>Tables</h2>
+  <table>
+    <thead>
+      <tr><th>Option</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>data</td><td>path to data files to supply the data that will be passed into templates.</td></tr>
+      <tr><td>engine</td><td>engine to be used for processing templates. Handlebars is the default.</td></tr>
+      <tr><td>ext</td><td>extension to be used for dest files.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Links</h2>
+  <p><a href="http://dev.nodeca.com">link text</a></p>
+  <p><a href="http://nodeca.github.io/pica/demo/" title="title text!">link with title</a></p>
+  <p>Autoconverted link https://github.com/nodeca/pica</p>
+
+  <h3><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
+  <p>Footnote 1 link[^first].</p>
+  <p>Footnote 2 link[^second].</p>
+  <p>Duplicated footnote reference[^second].</p>
+
+  <p><a href="../index.html">課題一覧へ戻る</a> / <a href="../docs/">Markdownページを見る</a></p>
 </body>
 </html>
